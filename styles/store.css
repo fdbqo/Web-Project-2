@@ -19,6 +19,21 @@ body::after {
     background-size: cover;
 }
 
+body.github-pages::after {
+    content: "";
+    background-image: url('/Web-Project-2/images/background/bg-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 .card-header {

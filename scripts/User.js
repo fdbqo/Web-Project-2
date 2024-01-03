@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateDisplay();
 
+    const isGitHubPages = window.location.hostname === 'fdbqo.github.io';
+
+    
+    if (isGitHubPages) {
+        document.body.classList.add('github-pages');
+    }
+
 });
 
 
