@@ -6,7 +6,7 @@ let minPrice = 0;
 let maxPrice = 1000;
 
 window.onload = function() {
-    fetch('../json/products.json')
+    fetch('/json/products.json')
     .then(response => {
         if (!response.ok) {
             throw new Error("HTTP error " + response.status);
