@@ -5,8 +5,15 @@ let selectedBrandType = "All";
 let minPrice = 0;
 let maxPrice = 1000;
 
+
 window.onload = function() {
-    fetch('/json/products.json')
+    const isGitHubPages = window.location.hostname === 'fdbqo.github.io';
+
+    const jsonPath = isGitHubPages
+    ? '/Web-Project-2/json/products.json'
+    : '/json/products.json';
+
+    fetch(jsonPath)
     .then(response => {
         if (!response.ok) {
             throw new Error("HTTP error " + response.status);
