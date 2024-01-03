@@ -1,0 +1,60 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.button-extra {
+    width: 150px;
+    transition: filter 0.2s ease, transform 0.3s ease;
+
+}
+
+
+
+.btn-primary {
+    background-color: rgb(0, 0, 255, 0.8);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+
+
+}
+
+h1.display-5.fw-bold.text-body-emphasis.text-title {
+    color: white !important;
+}
+
+.text-div {
+    color: white;
+}
+
+
+.button-extra:hover {
+
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+    transform: translate(0px, -2px);
+    background-color: rgb(0, 0, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.blur {
+    transition: filter 0.2s ease, transform 0.3s ease;
+    transform: scale(0.99);
+    filter: blur(1px);
+
+}
+
+.aboutusDiv {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.contactusDiv {
+    height: 700px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

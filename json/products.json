@@ -1,0 +1,68 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "type": "surfboard",
+            "name": "OLAIAN",
+            "description": "FOAM SURFBOARD 500 7'8. COMES WITH 1 LEASH AND 3 FINS",
+            "image": "images/products/product-1.jpg",
+            "price": "215.00"
+        },
+        {
+            "id": "2",
+            "type": "surfboard",
+            "name": "OLAIAN",
+            "description": "COMPACT INFLATABLE SURFBOARD 500 7'6'' (WITHOUT PUMP OR LEASH)",
+            "image": "images/products/product-6.jpg",
+            "price": "300.00"
+        },
+        {
+            "id": "3",
+            "type": "surfboard",
+            "name": "OLAIAN",
+            "description": "FOAM SURFBOARD 900 7’ . COMES WITH 3 FINS.",
+            "image": "images/products/product-3.jpg",
+            "price": "240.00"
+        },
+        {
+            "id": "4",
+            "type": "wetsuit",
+            "name": "OLAIAN",
+            "description": "MEN'S SURFING 4/3 MM NEOPRENE WETSUIT 100 - BLACK",
+            "image": "images/products/product-wetsuit-1.jpg",
+            "price": "95.00"
+        },
+        {
+            "id": "5",
+            "type": "surfboard",
+            "name": "OLAIAN",
+            "description": "FOAM SURFBOARD 100 REINFORCED 8'2'' 100 L + LEASH",
+            "image": "images/products/product-4.jpg",
+            "price": "330.00"
+        },
+        {
+            "id": "6",
+            "type": "accessory",
+            "name": "Surfboard Leash",
+            "description": "Surfboard leash, 7mm diameter, 2.5m long.",
+            "image": "images/products/product-accessory-leash-1.jpg",
+            "price": "21.00"
+        },
+        {
+            "id": "7",
+            "type": "accessory",
+            "name": "Surfboard Leash",
+            "description": "Surfboard leash, 7mm diameter, 2.0m long.",
+            "image": "images/products/product-accessory-leash-1.jpg",
+            "price": "18.99"
+        },
+        {
+            "id": "8",
+            "type": "surfboard",
+            "name": "OLAIAN",
+            "description": "FOAM SURFBOARD 900 6' WITH 3 FINS.",
+            "image": "images/products/product-5.jpg",
+            "price": "210.00"
+        }
+    ]
+}

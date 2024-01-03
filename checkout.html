@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Checkout page for SurfSligo, the best place to buy surfing gear in Sligo.">
+  <meta name="keywords" content="SurfSligo, Surfing, Surf Gear, Checkout">
+  <meta name="author" content="Finn De Bie">
+
+  <title>Checkout - SurfSligo</title>
+  <link rel="icon" href="images/icons/surfing_black_24dp - Copy.svg">
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/store.css">
+  <link rel="stylesheet" href="styles/checkout.css">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-dark">
+
+    <div class="container-fluid align-items-center">
+
+      <a class="navbar-brand" href="index.html">
+        <img src="images/icons/surfing_black_24dp.svg" class="svg-logo" style="width: 40px; height: 40px;">
+        SurfSligo
+      </a>
+
+      <div class="navbar-text text-black order-lg-last">
+        <button class="nav-item nav-extra cart-button">
+          <img src="images/icons/cart-fill.svg" style="width: 40px; height: 40px;" alt="cart icon">
+          Cart
+        </button>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item nav-extra">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item nav-extra">
+            <a class="nav-link" href="store.html">Store</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+
+        <div class="checkout-div">
+          <div id="checkoutItems">
+
+          </div>
+          <div class="footer">
+            <p id="totalPrice" style="margin: 5px; float:left;">Total: €0.00</p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-4">
+
+        <div class="checkout-form">
+          <h3>Checkout Form</h3>
+          <form id="checkoutForm">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" class="form-control" id="fname" name="fname" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" class="form-control" id="lname" name="lname" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email"
+                pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" required>
+            </div>
+
+            <div class="address-data">
+              <p><b>Address</b></p>
+              <div class="form-group address-lines">
+                <label for="address">Address Line 1</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+              </div>
+              <div class="form-group address-lines">
+                <label for="address">Address Line 2</label>
+                <input type="text" class="form-control" id="address" name="address">
+              </div>
+              <div class="form-group address-lines">
+                <label for="address">Address Line 3</label>
+                <input type="text" class="form-control" id="address" name="address">
+              </div>
+              <div class="form-group address-lines">
+                <label for="address">County</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+              </div>
+            </div>
+
+            <div class="card-data">
+              <p><b>Card Details</b></p>
+              <div class="form-group card-info">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" name="cardNumber"
+                  pattern="^\d{16}$|^\d{4} \d{4} \d{4} \d{4}$" required>
+              </div>
+              <div class="form-group card-info">
+                <label for="cvc">CVC</label>
+                <input type="text" class="form-control" id="cvc" name="cvc" pattern="^[0-9]{3}$" required>
+              </div>
+              <div class="form-group card-info">
+                <label for="nameOnCard">Name on Card</label>
+                <input type="text" class="form-control" id="nameOnCard" name="nameOnCard">
+              </div>
+              <div class="form-group card-info">
+                <label for="expiryDate">Date of expiry</label>
+
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="month" aria-label="month"
+                  pattern="^(0[1-9]|1[0-2])$" required>
+                <span class="input-group-text">/</span>
+                <input type="text" class="form-control" placeholder="year" aria-label="year"
+                  pattern="^(?:2[4-9]|[3-9][0-9])$" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="clearCart2">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <script type="module" src="scripts/Checkout.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+  <!-- <script type="module" src="scripts/Product.js"></script> -->
+  <!-- <script src="scripts/product-adder.js"></script> -->
+  <script src="scripts/script-main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script type="module" src="scripts/CheckoutPage.js"></script>
+</body>
+
+</html>

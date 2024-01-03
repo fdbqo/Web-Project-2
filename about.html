@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Checkout page for SurfSligo, the best place to buy surfing gear in Sligo.">
+    <meta name="keywords" content="SurfSligo, Surfing, Surf Gear, about us, about surf, about surf sligo">
+    <meta name="author" content="Finn De Bie">
+
+    <title>About - SurfSligo</title>
+  <link rel="icon" href="images/icons/surfing_black_24dp - Copy.svg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+</head>
+
+<body>
+
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">User Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="error" id="userError"></div>
+                    <form id="userForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email"
+                                pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" placeholder="(optional)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" id="submitUserForm" onclick="SignUp(event)">Register</button>
+                    <button class="btn btn-success" id="submitLoginForm" onclick="LogIn(event)">Login</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-dark">
+
+        <div class="container-fluid align-items-center">
+
+            <a class="navbar-brand" href="#">
+                <img src="images/icons/surfing_black_24dp.svg" class="svg-logo" style="width: 40px; height: 40px;">
+                SurfSligo
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link " aria-current="page" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link about-link active" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link contact-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link user-modal" id="userButton">User</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="aboutusDiv">
+                <h1>About us</h1>
+                <p>SurfSligo is a surf shopping website based out of County Sligo, Ireland. Our goal is to provide
+                    surfers with the best equipment at the best prices. We are a small team of surfers who are
+                    passionate about the sport and want to share our passion with the world. We are located in the
+                    heart of Sligo town, just a short drive from the beach. Our support is open 7 days a week to provide
+                    all the help necessary
+                </p>
+                <h1>Our Goal</h1>
+                <div id="map" style="width: 300px; height: 400px; float: right; margin-left: 20px;">
+                    <iframe src="https://maps.google.com/maps?q=Strandhill%2C%20Sligo%2C%20Ireland&t=&z=13&ie=UTF8&iwloc=&output=embed" width="250" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p>Our goal is to provide surfers with great cost items and fast delivery, while remaining sustainable. All materials we use are sustainably made wherever possible.</p>
+                <h1>Our Team</h1>
+                <p>Our team is made up of passionate and experienced individuals who love surfing and the surf culture. We have a diverse team with a wide range of skills and experiences, which allows us to bring a unique perspective to our work.</p>
+                <p>John Doe, our CEO, is a seasoned surfer with over 20 years of experience in the industry. Jane Smith, our CTO, brings a wealth of technical knowledge and innovation to our team. Bob Johnson, our Marketing Manager, has a knack for connecting with our customers and understanding their needs.</p>
+                <p>We are all united by our love for surfing and our commitment to providing the best products and services to our customers. We believe in the power of community and are proud to be a part of the vibrant surf community in Sligo.</p>
+                <h1>Get in contact</h1>
+                <p>Would you like to get in contact with us, give us some feedback or anything else? Head over to our <a href="contact.html">Contact us</a> page and fill out the form, or even visit us at the location on the map</p>
+           </div>
+          </div>
+        </div>
+    </div>
+      
+
+
+
+    <script src="scripts/User.js"></script>
+    <script src="scripts/script-main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

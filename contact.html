@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="store page for SurfSligo, the best place to buy surfing gear in Sligo.">
+    <meta name="keywords" content="SurfSligo, Surfing, Surf Gear, contact page, surf contact">
+    <meta name="author" content="Finn De Bie">
+
+    <title>Contact - SurfSligo</title>
+    <link rel="icon" href="images/icons/surfing_black_24dp - Copy.svg">
+
+</head>
+
+<body>
+
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">User Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="error" id="userError"></div>
+                    <form id="userForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email"
+                                pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" placeholder="(optional)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" id="submitUserForm" onclick="SignUp(event)">Register</button>
+                    <button class="btn btn-success" id="submitLoginForm" onclick="LogIn(event)">Login</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-dark">
+
+        <div class="container-fluid align-items-center">
+
+            <a class="navbar-brand" href="#">
+                <img src="images/icons/surfing_black_24dp.svg" class="svg-logo" style="width: 40px; height: 40px;">
+                SurfSligo
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link " aria-current="page" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link about-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link contact-link active" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item nav-extra">
+                        <a class="nav-link user-modal" id="userButton">User</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="contactusDiv">
+                    <h1>Map</h1>
+                    <div id="map" style="width: 100%; height: 400px;">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Strandhill%2C%20Sligo%2C%20Ireland&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <p style="margin-top: 10px;">Address : Building 1, Strandhill, Sligo, Co.Sligo</p>
+
+                    <h1 style="margin-top: 10px;">Contact Us</h1>
+                    <p>Want to get in contact? Call us or send us a message</p>
+                    <ul>
+                        <li>
+                            Phone : +353 083 083 0830
+                        </li>
+                        <li>
+                            Email : surfsligobusiness@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="additional-box" style="width: 100%; height: 400px; margin-top: 20px;">
+                    <!-- Content for the additional box goes here -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Empty div for spacing -->
+
+                <div class="contactusDiv">
+                    <form method="GET" id="contactForm">
+                        <div class="mb-3">
+                          <label for="contactName" class="form-label">Name</label>
+                          <input type="text" placeholder="Your name" class="form-control" id="contactName" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="contactEmail" class="form-label">Email address</label>
+                          <input type="email" placeholder="Your email address" class="form-control" id="contactEmail" name="email"
+                            pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="contactMessage" class="form-label">Message</label>
+                          <textarea class="form-control" placeholder="Your message" id="contactMessage" name="message" rows="3"
+                            required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                        <div class="mb-3" style="margin-top: 10px;">
+                            <label>Send us a message here and we'll get back to you as soon as possible!</label>
+                        </div>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="scripts/User.js"></script>
+    <script src="scripts/script-main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

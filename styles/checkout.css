@@ -1,0 +1,36 @@
+.checkout-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.checkout-div {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.card-checkout {
+   
+    padding: 10px;
+    margin-bottom: 10px !important;
+}
+
+.form-group {
+    padding-bottom: 15px;
+}
+
+.address-data, .card-data {
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-group input[name="address"] {
+
+  
+}
+
